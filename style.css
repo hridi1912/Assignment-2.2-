@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh ;
+    background :linear-gradient(135deg,rgb(135, 74, 84),rgb(141, 141, 233));
+    padding: 10px;
+}
+h3{
+    color: rgb(56, 41, 64);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content:center ;
+}
+.todo-list img{
+    width: 30px;
+    margin-left: 10px ;
+}
+.todo-list{
+    width: 100%;
+    max-width: 540px;
+    
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(178, 172, 172);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding:16px 25px ;
+    background: rgb(114, 101, 101);
+    font-size: 15px;
+    color: rgb(55, 34, 55);
+    cursor: pointer;
+    border-radius: 40px;
+}
+li{
+    font-size: 17px;
+    list-style:none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 9px;
+}
+
+
+.checked{
+    text-decoration: line-through;
+    color: rgb(84, 84, 94);
+
+}
+.checked::before{
+    background-image:url(images/checked.jpg) ;
+
+}
+span{
+    position:absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+    color: rgb(55, 48, 48);
+    line-height: 40px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+edit{
+    position:absolute;
+    right: 40px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+    color: rgb(55, 48, 48);
+    line-height: 40px;
+    text-align: center;
+    
+}
+ul li edit:hover{
+    background: rgb(57, 33, 57);
+    color: aliceblue;
+}
+ul li span:hover{
+    background: rgb(57, 33, 57);
+    color: aliceblue;
+}
+.delete-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
